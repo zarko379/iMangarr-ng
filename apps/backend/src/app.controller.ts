@@ -10,7 +10,8 @@ import * as bcrypt from 'bcryptjs';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const DATA_DIR = path.join(process.cwd(), 'apps/backend/data');
+//const DATA_DIR = path.join(process.cwd(), 'apps/backend/data');
+const DATA_DIR = path.join(process.cwd(), '/data/');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 
 // Asegúrate de que la carpeta exista
