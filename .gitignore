@@ -4,6 +4,9 @@ node_modules/
 .turbo/
 pnpm-lock.yaml  # opcional: si no quieres lockfile en git
 
+# Data
+apps/backend/data/
+
 # Builds
 dist/
 build/
