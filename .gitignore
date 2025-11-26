@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.turbo/
+pnpm-lock.yaml  # opcional: si no quieres lockfile en git
+
+# Builds
+dist/
+build/
+.next/
+
+# Logs y temps
+*.log
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
