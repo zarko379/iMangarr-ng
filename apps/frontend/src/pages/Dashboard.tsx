@@ -1,1 +1,0 @@
-export default function Dashboard() { return <div className='flex min-h-screen items-center justify-center bg-[#0f172a] text-white'><h1 className='text-6xl'>DASHBOARD</h1><p className='text-2xl mt-8'>Bienvenido al futuro iMangarr-ng</p></div>; }

@@ -1,11 +1,6 @@
-# Dependencies
-node_modules/
-.pnpm-store/
-.turbo/
-pnpm-lock.yaml  # opcional: si no quieres lockfile en git
-
-# Data
-apps/backend/data/
+# Env
+venv/
+__pycache__/
 
 # Builds
 dist/
