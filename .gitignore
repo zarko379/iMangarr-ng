@@ -2,6 +2,9 @@
 venv/
 __pycache__/
 
+# Config
+config.json
+
 # Builds
 dist/
 build/

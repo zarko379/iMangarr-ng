@@ -55,7 +55,7 @@
       <div class="max-w-screen-2xl mx-auto">
         <!-- Aquí irán los resultados o el grid de mangas -->
         <div id="search-results-container" class="mt-8">
-          <!-- Estado vacío inicial -->
+          {% if library|length == 0 %}
           <div class="text-center py-32">
             <div class="mx-auto w-32 h-32 bg-slate-800 rounded-full flex items-center justify-center mb-8">
               <svg class="w-16 h-16 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,8 +65,22 @@
             <p class="text-3xl text-slate-400">Aún no tienes mangas</p>
             <p class="text-xl text-slate-500 mt-4">Escribe arriba para buscar en AniList</p>
           </div>
+          {% else %}
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-8">
+            {% for manga in library %}
+            <div class="group relative bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700">
+              <img src="{{ manga.cover }}" class="w-full h-64 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <h3 class="text-white font-bold text-lg line-clamp-2">{{ manga.title }}</h3>
+                <p class="text-cyan-400 text-sm mt-1">Monitorizando</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
-      </div>
+    </div>
     </div>
   </main>
 </body>
